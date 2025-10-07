@@ -7,9 +7,9 @@
     --header-height: 3.5rem;
 
     /*========== Colors ==========*/
-    --first-color: hsl(200, 70%, 50%); 
-    --first-color-alt: hsl(200, 70%, 40%); 
-    --title-color: hsl(200, 10%, 20%); 
+    --first-color: rgba(20, 178, 76, 1); 
+    --first-color-alt: rgba(20, 178, 76, .8); 
+    --title-color: hsl(192, 4%, 53%); 
     --text-color: hsl(200, 10%, 30%); 
     --text-color-light: hsl(200, 10%, 50%); 
     --white-color: hsl(200, 10%, 98%); 
@@ -18,7 +18,9 @@
     --footer-bg-color: hsl(197, 5%, 73%); 
     --scrollup-bg-color: hsl(200, 2%, 33%); 
     --popular-bg-color: hsl(206, 26%, 95%); 
-    /* --logos-bg-color: hsl(0, 56%, 98%);  */
+    --logos-bg-color: rgba(20, 178, 76, .15); 
+    --black-color: hsl(0, 0%, 0%); 
+    --pure-white-color: hsl(0, 0%, 100%); 
 
     /*========== Font and typography ==========*/
     --body-font: 'Exo', sans-serif;
@@ -99,7 +101,7 @@ img {
 
 .section {
     padding: 4.5rem 0 2rem;
-    background-color: hsl(200, 10%, 98%); /* White with slight gray undertone for sections */
+    background-color: var(--white-color); /* White with slight gray undertone for sections */
 }
 
 .section__title {
@@ -115,7 +117,7 @@ img {
 
 /* ======== Shape X Design ======*/
 .shapeX {
-    background-color: hsla(200, 70%, 50%, .3); /* Blue with transparency for shapes */
+    background-color: rgba(20, 178, 76, .3); /* Green with transparency for shapes */
     filter: blur(112px);
     border-radius: 50%;
 }
@@ -168,11 +170,19 @@ img {
 
 .nav__logo i {
     font-size: 1.25rem;
-    color: var(--title-color); /* Dark gray for logo icon */
+    color: var(--black-color); 
 }
 
 .nav__logo:hover {
-    color: var(--first-color); /* Blue on hover */
+    color: var(--first-color); 
+}
+
+.nav__logo h2 {
+    color: var(--black-color);
+}
+
+.nav__logo h2:hover {
+    color: var(--first-color);
 }
 
 .nav__toggle {
@@ -210,7 +220,7 @@ img {
 }
 
 .nav__link:hover {
-    color: var(--first-color); /* Blue on hover */
+    color: var(--black-color); /* Black on hover for contrast */
 }
 
 .nav__close {
@@ -233,7 +243,7 @@ img {
 }
 
 .active-link {
-    color: var(--first-color); /* Blue for active link */
+    color: var(--first-color); /* Green for active link */
 }
 
 /*=============== HOME ===============*/
@@ -242,7 +252,7 @@ img {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-color: hsl(200, 30%, 80%); /* Blue with gray undertone for landing page */
+    background-color: hsl(200, 10%, 20%); /* Dark gray for landing page */
 }
 
 .home__container {
@@ -258,24 +268,26 @@ img {
 .home__title {
     font-size: var(--h1-font-size);
     margin-bottom: 1rem;
+    color: var(--pure-white-color); /* White for readability on dark background */
 }
 
 .home__subtitle {
     font-size: var(--h3-font-size);
     margin-bottom: .25rem;
+    color: var(--pure-white-color); /* White for readability */
 }
 
 .home__elec {
     font-size: var(--small-font-size);
     font-weight: 400;
-    color: var(--text-color);
+    color: var(--text-color-light);
     display: inline-flex;
     align-items: center;
     column-gap: .25rem;
 }
 
 .home__elec i {
-    color: var(--first-color); /* Blue for icons */
+    color: var(--first-color); /* Green for icons */
 }
 
 .home__img {
@@ -285,8 +297,8 @@ img {
 
 .home__social {
     position: absolute;
-    right: 30px;
-    top: 25rem;
+    right: 15px; 
+    top: 22rem; 
     display: flex;
     gap: 1rem;
     flex-direction: column;
@@ -294,12 +306,12 @@ img {
 }
 
 .home__social-icon {
-    color: var(--title-color); /* Dark gray for social icons */
+    color: var(--pure-white-color); /* White for social icons on dark background */
     font-size: 1.4em;
 }
 
 .home__social-icon:hover {
-    color: var(--first-color); /* Blue on hover */
+    color: var(--first-color); /* Green on hover */
 }
 
 .home .shape__big,
@@ -320,8 +332,8 @@ img {
 /*=============== BUTTON ===============*/
 .button {
     display: inline-block;
-    background-color: var(--first-color); /* Blue for buttons */
-    color: var(--white-color);
+    background-color: var(--first-color); /* Green for buttons */
+    color: var(--pure-white-color); /* White for button text */
     padding: .75rem 2rem;
     border-radius: .25rem;
     font-size: var(--normal-font-size);
@@ -329,7 +341,7 @@ img {
 }
 
 .button:hover {
-    background-color: var(--first-color-alt); /* Darker blue on hover */
+    background-color: var(--first-color-alt); /* Darker green on hover */
 }
 
 /*=============== ABOUT ===============*/
@@ -355,6 +367,7 @@ img {
     backdrop-filter: blur(16px);
     text-align: center;
     border-radius: 1.25rem;
+    padding: 1rem; /* Added padding for content spacing */
 }
 
 .about__card-title {
@@ -433,12 +446,12 @@ img {
     bottom: 0;
     border-radius: 1rem 0 1rem 0;
     cursor: pointer;
-    background-color: var(--first-color); /* Blue for button */
-    color: var(--white-color);
+    background-color: var(--first-color); /* Green for button */
+    color: var(--pure-white-color); /* White for button icon */
 }
 
 .popular__button:hover {
-    background-color: var(--first-color-alt); /* Darker blue on hover */
+    background-color: var(--first-color-alt); /* Darker green on hover */
 }
 
 .popular__button i {
@@ -454,7 +467,7 @@ img {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: var(--first-color); /* Blue for active bullet */
+    background-color: var(--first-color); /* Green for active bullet */
 }
 
 /*=============== WHY CHOOSE US ===============*/
@@ -481,7 +494,7 @@ img {
 .why-choose-us__card-title {
     font-size: var(--h3-font-size);
     margin-bottom: 1rem;
-    color: var(--first-color); /* Blue for card titles */
+    color: var(--first-color); /* Green for card titles */
 }
 
 .why-choose-us__card-description {
@@ -535,26 +548,32 @@ img {
 
 /*=============== LOGOS ===============*/
 .logos {
-    background-color: var(--logos-bg-color); /* Light light gray for logos section */
+    background-color: var(--logos-bg-color); /* Light green with transparency for logos section */
+    padding: 2rem 0; /* Adjusted padding for footer integration */
 }
 
 .logos__img {
     width: 40px;
     opacity: .4;
     transition: .3s;
+    filter: grayscale(100%); /* Black and white effect for logos */
 }
 
 .logos__container {
     grid-template-columns: repeat(3, max-content);
     justify-content: center;
     align-items: center;
-    gap: 4rem;
-    padding-bottom: 2rem;
+    gap: 2rem; /* Reduced gap for footer integration */
+    padding-bottom: 1rem; /* Reduced padding-bottom */
 }
 
 .logos__img:hover {
     opacity: 1;
     cursor: pointer;
+    filter: none; /* Remove grayscale on hover for full color */
+    background-color: var(--pure-white-color); /* White background on hover for contrast */
+    padding: 0.2rem; /* Slight padding for hover effect */
+    border-radius: 0.25rem; /* Subtle rounding for hover */
 }
 
 /*=============== FOOTER ===============*/
@@ -584,6 +603,7 @@ img {
 .footer__container {
     row-gap: 2.5rem;
     position: relative;
+    padding-top: 2rem; /* Added padding to separate logos from footer content */
 }
 
 .footer__logo {
@@ -598,13 +618,13 @@ img {
 }
 
 .footer__logo:hover {
-    color: var(--first-color); /* Blue on hover */
+    color: var(--first-color); 
 }
 
 .footer__logo i {
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--title-color); /* Dark gray for logo icon */
+    color: var(--title-color); 
 }
 
 .footer__title {
@@ -626,7 +646,7 @@ img {
 
 .footer__link:hover,
 .footer__social-link:hover {
-    color: var(--first-color); /* Blue on hover */
+    color: var(--first-color); 
 }
 
 .footer__social {
@@ -636,7 +656,7 @@ img {
 
 .footer__social-link {
     font-size: 1.25rem;
-    color: var(--title-color); /* Dark gray for social links */
+    color: var(--title-color); 
 }
 
 .footer__copy {
@@ -645,6 +665,14 @@ img {
     text-align: center;
     font-size: var(--smaller-font-size);
     color: var(--text-color-light);
+}
+
+.footer__links a {
+    color: var(--first-color);
+}
+
+.footer__links a:hover {
+    color: var(--black-color);
 }
 
 /*=============== SCROLL BAR ===============*/
@@ -819,6 +847,7 @@ img {
     }
     .logos__container {
         grid-template-columns: repeat(6, max-content);
+        gap: 3rem; /* Adjusted for larger screens */
     }
     .logos__img {
         width: 50px;
