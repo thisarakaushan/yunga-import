@@ -1,0 +1,304 @@
+:root {
+  --bg-dark: #0b1222;
+  --bg-glass: rgba(20, 32, 60, 0.83);
+  --gold: #f6c543;
+  --white: #fff;
+  --glass: rgba(255,255,255,0.11);
+  --primary: #1c73e5;
+  --shadow: 0 6px 28px #0b122249;
+  --text: #e5e8ec;
+}
+
+/* Base Reset */
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text);
+}
+header {
+  position: sticky; top: 0; z-index: 100;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 5vw;
+  background: var(--bg-glass);
+  box-shadow: var(--shadow);
+  border-radius: 0 0 18px 18px;
+}
+.nav-logo { width: 42px; }
+
+/* Navigation */
+nav {
+  display: flex;
+}
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 9px;
+  margin: 0 4px;
+  transition: background 0.2s;
+  font-size: 1.09rem;
+}
+nav a:hover {
+  background: var(--gold);
+  color: var(--bg-dark);
+}
+
+/* Mobile Navigation Toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+}
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--gold);
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 68vh;
+  min-height: 490px;
+  background: #181f31;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#bgvideo {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  z-index: 0;
+  opacity: 0.46;
+}
+.hero-overlay {
+  position: absolute;
+  width: 100%; height: 100%;
+  background: linear-gradient(110deg, #0b1222cc 26%, #31323350 98%);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  margin-top: 32px;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.hero-content p {
+  font-size: 1.24rem;
+  color: var(--white);
+  margin-bottom: 22px;
+  opacity: 0.95;
+}
+.cta {
+  display: inline-block;
+  padding: 13px 38px;
+  font-size: 1.22rem;
+  font-weight: bold;
+  color: var(--bg-dark);
+  background: var(--gold);
+  border-radius: 13px;
+  box-shadow: 0 3px 22px #f6c54358;
+  transition: background 0.23s, box-shadow 0.23s;
+  text-decoration: none;
+}
+.cta:hover { background: var(--white); box-shadow: 0 6px 28px #f6c54388; }
+
+/* Section */
+.section {
+  max-width: 1080px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 21px;
+}
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+}
+
+/* About */
+.flex-row {
+  display: flex;
+  gap: 38px;
+  align-items: center;
+  margin-top: 19px;
+}
+.flex-row img {
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+.flex-row div p {
+  font-size: 1.09rem;
+}
+
+/* Why Us */
+.dark {
+  background: #181f31;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 28px;
+  margin-top: 33px;
+}
+.feature {
+  background: var(--bg-glass);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  padding: 30px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 240px;
+  transition: transform 0.18s;
+}
+.feature img { width: 56px; margin-bottom: 14px; }
+.feature h3 {
+  color: var(--gold);
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.feature p { color: var(--white); font-size: 1rem; opacity: 0.9; }
+
+/* Contact */
+.contact h2 { color: var(--gold); }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  max-width: 370px;
+  margin: 0 auto 22px auto;
+}
+form input, form textarea {
+  background: #202944;
+  color: var(--white);
+  border: 1.2px solid #7c87a5;
+  border-radius: 11px;
+  padding: 14px;
+  font-size: 1rem;
+}
+form button {
+  background: var(--gold);
+  font-weight: bold;
+  color: var(--bg-dark);
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.07rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+form button:hover { background: var(--white);}
+.direct-contact {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7px;
+}
+.direct-contact img { width: 60px; }
+.direct-contact span { color: var(--gold); font-size: 1rem; margin-right: 7px; }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 19px 0;
+  color: var(--gold);
+  background: #161a24cc;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+  border-radius: 21px 21px 0 0;
+  margin-top: 60px;
+}
+
+/* Floating WhatsApp Button */
+a[href^="https://wa.me"] {
+  position: fixed; right: 46px; bottom: 38px;
+  z-index: 999;
+  width: 64px; height: 64px;
+  background: var(--glass);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+a[href^="https://wa.me"]:hover { background: var(--gold); }
+
+/* Mobile Navigation Styles */
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    padding: 20px 5vw;
+    border-radius: 0 0 18px 18px;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  nav a {
+    padding: 12px 0;
+    margin: 5px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  nav a:last-child {
+    border-bottom: none;
+  }
+
+  /* Hamburger Animation */
+  .nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .section, .glass { padding:13vw 5vw; }
+  .flex-row { flex-direction: column; gap:22px; text-align:center;}
+  .features-grid { grid-template-columns: 1fr;}
+  .feature { min-height: 170px;}
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yunga | Sri Lanka's Premier Auto Imports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar glass">
+            <img src="assets/yunga-logo.png" alt="Yunga Logo" class="nav-logo" />
+            <nav id="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#why">Why Us</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <video autoplay muted loop id="bgvideo">
+            <source src="assets/vid_5.mp4" type="video/mp4">
+            <img src="assets/dealership.jpg" alt="Yunga Showroom" />
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-aos="fade-down">
+            <h1>Yunga</h1>
+            <p>Sri Lanka's most trusted luxury car importer. Drive global excellence with Yunga.</p>
+            <a href="#contact" class="cta">Request Consultation</a>
+        </div>
+    </section>
+
+    <section id="about" class="glass section" data-aos="fade-right">
+        <h2>About Us</h2>
+        <div class="flex-row">
+            <img src="assets/dealership.jpg" alt="Yunga Showroom">
+            <div>
+                <p>
+                    Yunga is more than a dealership—we are your personal gateway to the world's finest automobiles.
+                    Backed by international partners and decades of experience, our process is transparent, streamlined,
+                    and tailored for Sri Lankan drivers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why" class="section dark" data-aos="fade-up">
+        <h2>Why Choose Yunga?</h2>
+        <div class="features-grid">
+            <div class="feature glass" data-aos="zoom-in">
+                <img src="assets/icon-selection.png" alt="Selection Icon" />
+                <h3>Global Selection</h3>
+                <p>Handpicked luxury and premium vehicles for the Sri Lankan market.</p>
+            </div>
+            <div class="feature glass" data-aos="zoom-in" data-aos-delay="100">
+                <img src="assets/icon-import.png" alt="Import Icon" />
+                <h3>End-to-End Import</h3>
+                <p>We manage all custom, paperwork, and logistics for you.</p>
+            </div>
+            <div class="feature glass" data-aos="zoom-in" data-aos-delay="200">
+                <img src="assets/icon-care.png" alt="Care Icon" />
+                <h3>Aftercare & Support</h3>
+                <p>Warranty, service, and local expertise—always ready.</p>
+            </div>
+            <div class="feature glass" data-aos="zoom-in" data-aos-delay="300">
+                <img src="assets/icon-local.png" alt="Local Icon" />
+                <h3>Sri Lankan Roots</h3>
+                <p>Locally owned, globally connected, proudly Sri Lankan.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section glass contact" data-aos="fade-up">
+        <h2>Contact Yunga</h2>
+        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+            <p id="formMessage"></p>
+        </form>
+
+        <div class="direct-contact">
+            <a href="https://wa.me/94xxxxxxxxx" target="_blank">
+                <img src="assets/whatsapp.png" alt="WhatsApp" />
+            </a>
+            <span>+94 XX XXX XXXX</span>
+            <span>contact@yunga.lk</span>
+        </div>
+    </section>
+
+    <footer class="dark glass">
+        <p>&copy; 2025 Yunga. Powered by Sri Lankan Excellence.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
